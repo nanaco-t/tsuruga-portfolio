@@ -11,6 +11,10 @@
     font-display: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ece9df;
     color: #727272;
@@ -29,6 +33,7 @@ a {
 }
 
 #header {
+    background-color: #ece9dfb7;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,151 +76,171 @@ a {
     box-sizing: border-box;
 }
 
+.hamburger,
+.navi-sp {
+    display: none;
+}
+
 .hero-text {
-            position: absolute;
-            top: 384px;
-            left: 200px;
-            color: #727272;
-        }
+    position: absolute;
+    top: 384px;
+    left: 13%;
+    color: #727272;
+}
 
 .hero-text .title {
-            font-family: 'Futura', sans-serif;
-            font-size: 52px;
-            line-height: 1.3em;
-            margin-bottom: 40px;
-            color: #727272;
-        }
+    font-family: 'Futura', sans-serif;
+    font-size: 52px;
+    line-height: 1.3em;
+    margin-bottom: 40px;
+    color: #727272;
+    white-space: nowrap;
+}
 
 .hero-text .title .portfolio {
-            letter-spacing: 0.05em;
-        }
+    letter-spacing: 0.05em;
+}
 
 .hero-text .description {
-            font-family: "fot-cezanne-pron", serif;
-            font-size: 20px;
-            line-height: 2.1em;
-            color: #727272;
-        }
+    font-family: "fot-cezanne-pron", serif;
+    font-size: 20px;
+    line-height: 2.1em;
+    color: #727272;
+    white-space: nowrap;
+}
+
+.br-desktop {
+    display: inline;
+}
+
+/* モバイル用の改行（初期状態では非表示） */
+.br-mobile {
+    display: none;
+}
 
 .works-section {
-           padding-top: 1000px;
-           text-align: center;
-           width: 100%;
-        }
+    padding-top: 1000px;
+    padding-inline: 20px;
+    text-align: center;
+    width: 100%;
+}
 
 .works-title-container {
-            position: relative;
-            display: inline-block;
-        }
+    position: relative;
+    display: inline-block;
+}
 
 .works-title {
-            font-family: 'Futura', sans-serif;
-            font-size: 45px;
-            color: #727272;
-            margin: 0;
-            position: relative;
-            z-index: 2; /* テキストを前面に */
-            font-weight: 400;
-        }
+    font-family: 'Futura', sans-serif;
+    font-size: 45px;
+    color: #727272;
+    margin: 0;
+    position: relative;
+    z-index: 2; /* テキストを前面に */
+    font-weight: 400;
+}
 
 .works-bg-logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.5;
-            width: auto;
-            height: 150px;
-            z-index: 1; /* 背景として配置 */
-        }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    width: auto;
+    height: 150px;
+    z-index: 1; /* 背景として配置 */
+}
 
 .works-photo-container {
-            display: flex; 
-            margin: 0 auto;
-            max-width: 1000px;
-            width: 100%;
-            gap: 4%;
-           }
+    display: flex; 
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+    gap: 4%;
+}
 
 .works-item {
-            color: #727272;
-            flex: 0 0 auto; /* フレックスアイテムのサイズを固定 */
-        }
+    color: #727272;
+    flex: 0 0 auto; /* フレックスアイテムのサイズを固定 */
+    width: 48%;
+}
 
 .works-item img {
-            display: block; /* img要素のデフォルトの余白をなくす */
-            margin-top: 64px;
-            margin-bottom: 24px; 
-            width: 100%;
-        }     
+    display: block; /* img要素のデフォルトの余白をなくす */
+    margin-top: 64px;
+    margin-bottom: 24px; 
+    width: 100%;
+}     
 
 .works-titles {
-            margin-bottom: 16px;
-            text-align: left;
-            font-family: 'Futura', sans-serif;
-            font-size: 28px;
-            color: #727272;
-            padding: 0 24px;
-        }
+    margin-bottom: 16px;
+    text-align: left;
+    font-family: 'Futura', sans-serif;
+    font-size: 28px;
+    color: #727272;
+    padding: 0 24px;
+}
 
 .works-tags {
-            display: flex; 
-            justify-content: flex-start;
-            gap: 10px; 
-            padding: 0 24px;
-        }
+    display: flex; 
+    justify-content: flex-start;
+    gap: 10px; 
+    padding: 0 24px;
+    white-space: nowrap;
+    padding-inline: 20px;
+}
 
 .works-tags p {
-            margin: 0 8px 0 0; /* pタグのデフォルトの上下の余白をなくす */
-            font-family: "fot-cezanne-pron", serif;
-            font-size: 17px;
-            color: #727272;
-        }
+    margin: 0 8px 0 0; /* pタグのデフォルトの上下の余白をなくす */
+    font-family: "fot-cezanne-pron", serif;
+    font-size: 17px;
+    color: #727272;
+}
         
 .banner-item img {
-            width:  87%;
-            margin: 64px 0 20px 57px; 
-            display: block;
-        }
+    width:  76%;
+    margin: 64px 0 20px 57px; 
+    display: block;
+}
 
 .banner-item-rich {
-            margin-top: 55px;
-        }
+    margin-top: 55px;
+}
 
 .banner-item-pop img {
-            width:  87%;
-            margin: 64px 0 24px 57px; 
-            display: block;
-        }
+    width:  76%;
+    margin: 64px 0 24px 57px; 
+    display: block;
+}
 
 .ice {
-            margin-top: 22px;
-        }
+    margin-top: 22px;
+}
 
 .rich {
-            margin-top: 67px;
-        }        
+    margin-top: 67px;
+}        
 
 .about-section {
-           padding-top: 200px;
-           text-align: center;
-           width: 100%;
-        }
+    padding-top: 200px;
+    text-align: center;
+    width: 100%;
+}
 
 .about-title-container {
-            position: relative;
-            display: inline-block;
-        }
+    position: relative;
+    display: inline-block;
+}
 
 .about-title {
-            font-family: 'Futura', sans-serif;
-            font-size: 45px;
-            color: #727272;
-            margin: 0;
-            position: relative;
-            z-index: 2; 
-            font-weight: 400;
-        }        
+    font-family: 'Futura', sans-serif;
+    font-size: 45px;
+    color: #727272;
+    margin: 0;
+    position: relative;
+    z-index: 2; 
+    font-weight: 400;
+}        
 
 .about-content {
     max-width: 1000px;
@@ -223,24 +248,27 @@ a {
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
-    gap: 150px;
+    gap: 15%;
     padding-top: 80px;
     padding-left: 30px;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .about-photo {
-    flex: 0 0 350px;
-    height: 400px;
+    width: 33.6%;
+    height: 100%;
+    aspect-ratio: 336/375;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-text-content {
-    padding-top: 120px;
     flex: 1;
     text-align: left;
+    width: 51.4%;
+    
 }
 
 .about-text {
@@ -275,25 +303,26 @@ a {
 }
 
 .contact-section {
-           padding-top: 200px;
-           text-align: center;
-           width: 100%;
-        }
+    padding-top: 200px;
+    text-align: center;
+    width: 100%;
+    padding-inline: 20px;
+}
 
 .contact-title-container {
-            position: relative;
-            display: inline-block;
-        }
+    position: relative;
+    display: inline-block;
+}
 
 .contact-title {
-            font-family: 'Futura', sans-serif;
-            font-size: 45px;
-            color: #727272;
-            margin: 0;
-            position: relative;
-            z-index: 2; /* テキストを前面に */
-            font-weight: 400;
-        }
+    font-family: 'Futura', sans-serif;
+    font-size: 45px;
+    color: #727272;
+    margin: 0;
+    position: relative;
+    z-index: 2; /* テキストを前面に */
+    font-weight: 400;
+}
 
 .contact-intro {
     font-size: 16px;
@@ -350,7 +379,7 @@ a {
 }
 
 .form-textarea {
-    min-height: 120px;
+    min-height: 128px;
     resize: vertical;
 }
 
@@ -395,6 +424,7 @@ a {
 /* WORKS下層１ */
 .container {
     max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -523,9 +553,12 @@ a {
 .site-image {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 2%;
     margin-top: 100px;
     margin-bottom: 100px;
+    
+    text-align: center;
+    width: 100%;
 }
 
 /* WORKS下層２ */  
@@ -644,19 +677,33 @@ a {
     font-family: "fot-cezanne-pron", serif;
     }
 
+.detail-section-pop {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.detail-section-burger {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 80px;
+    align-items: flex-start;
+}
+
 /* ABOUT下層*/
-.about-section {
+.aboutme-section {
     padding: 240px 30px 0 30px;
     text-align: center;
     width: 100%;
 }
 
-.about-title-container {
+.aboutme-title-container {
     position: relative;
     display: inline-block;
 }
 
-.about-title {
+.aboutme-title {
     font-family: 'Futura', sans-serif;
     font-size: 70px;
     color: #727272;
@@ -676,9 +723,15 @@ a {
     height: 190px;
     z-index: 1; /* 背景として配置 */
 }
+
+.aboutme-contents {
+    width: 40%;
+}
+
 .aboutme-photo {
-    width: 350px;
-    height: 400px;
+    
+    height: 100%;
+    aspect-ratio: 396/442;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -703,7 +756,8 @@ a {
 }
 
 .aboutme-text-content {
-    
+    width: 45%;
+    min-width: 360px;
     border: 1px solid #727272;
     border-radius: 10px;
     padding: 24px;
@@ -818,6 +872,7 @@ a {
   white-space: nowrap;
 }
 
+/* サンクスページ */
 .thanks-section {
      padding: 240px 30px 0 30px;
     text-align: center;
@@ -845,4 +900,539 @@ a {
     color: #727272;
     text-align: center;
     line-height: 1.6em;
+}
+
+.back-section,
+.back-button-a,
+.contact-title-z,
+.contact-intro-z {
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px) {
+#header .hamburger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#header .navi {
+    display: none;
+}
+
+.hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #727272;
+    right: 0;
+    transition: 0.3s;
+}
+
+.hamburger span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #727272;
+    top: 14px;
+    right: 0;
+    transition: 0.3s;
+}
+
+.hamburger span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #727272;
+    top: -14px;
+    right: 0;
+    transition: 0.3s;
+}
+
+.open span {
+    background-color: transparent;
+}
+
+.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: #ece9df
+}
+
+.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: #ece9df;
+}
+
+#header .navi-sp {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #727272;
+    top: 0;
+    left: 0;
+}
+
+#header .navi-sp a {
+    color: #ece9df;
+    font-family: 'Futura', sans-serif;
+    font-size: 30px;
+}
+
+#header .navi-sp li:nth-child(3) a {
+    width: 168px;
+    height: 49px;
+    border: 1px solid #ece9df;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#header .navi-sp ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+.back-section,
+.back-button-a,
+.contact-title-z,
+.contact-intro-z {
+    display: block;
+}
+.br-desktop {
+    display: none;    /* デスクトップ改行を隠す */
+}
+    
+.br-mobile {
+    display: inline;  /* モバイル改行を表示 */
+}
+
+.hero-text {
+    position: absolute;
+    top: 132px;
+    left: 13%;
+    color: #727272;
+}
+
+.hero-text .title {
+    font-size: 32px;
+    line-height: 1.5em;
+    margin-bottom: 24px;
+}
+
+.hero-text .description {
+    font-size: 15px;
+    line-height: 2.2em;
+}
+
+.works-section{
+    padding-top: 800px;
+}
+
+.works-title {
+    font-size: 30px;
+}
+
+.works-bg-logo {
+    height: 100px;
+} 
+
+.works-photo-container {
+    flex-direction: column;
+    display: block; /* flexを無効化してblockに戻す */
+    gap: 0;
+}
+
+.works-titles {
+    font-size: 20px;
+}
+
+.works-tags p {
+    font-size: 12px;
+}
+
+.rich {
+    margin-top: 22px;
+}
+
+.about-section{
+    padding-top: 100px;
+}
+
+.about-title {
+    font-size: 30px;
+}
+
+.about-text-content {
+    width: 90%;
+   
+}
+
+.about-content {
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 0px;
+}
+
+.about-photo {
+    width: 80%;
+}
+
+.about-text {
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.about-text br {
+    display: none; /* すべての<br>を非表示 */
+}
+
+.about-button {
+    display: block;
+    text-align: center;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+.contact-section {
+    padding-top: 100px;
+}
+
+.contact-title {
+    font-size: 30px;
+}
+
+.contact-intro {
+    font-size: 10px;
+}
+
+.contact-form-container {
+    padding-inline: 20px;
+}
+
+.form-label {
+    font-size: 13px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-input {
+    padding: 5px 16px;
+}
+
+.submit-button {
+    padding: 8px 120px;
+    white-space: nowrap;
+}
+
+/* WORKS下層１ */
+.duration {
+    font-size: 10px;
+}
+
+.page-title {
+    font-size: 26px;
+}
+
+.content-section {
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.target-section {
+    margin-top: -24px;
+   
+}   
+
+.target-content h3 {
+    font-size: 20px;
+}
+
+.target-section p {
+    font-size: 16px;
+}
+
+.detail-section {
+    flex-direction: column;
+}
+
+.detail-title {
+    width: 150px;
+    min-width: 150px;
+}
+
+.detail-content {
+    font-size: 16px;
+    margin-top: -40px;
+}
+
+.back-section {
+    text-align: center;
+    width: 100%;
+}
+
+.back-button-a {
+    background-color: #788ce380;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 60px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    font-family: "fot-cezanne-pron", serif;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 56px;
+    width: 120px;
+    border: 1px solid #727272;
+}
+
+.back-button-b {
+    background-color: #ff843580;
+    color: #727272;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 60px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    font-family: "fot-cezanne-pron", serif;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 56px;
+    width: 120px;
+    border: 1px solid #727272;
+}
+
+.back-button-c {
+    background-color: #fff17480;
+    color: #727272;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 60px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    font-family: "fot-cezanne-pron", serif;
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 56px;
+    width: 120px;
+    border: 1px solid #727272;
+}
+
+.contact-title-container-a {
+    position: relative;
+    display: inline-block;
+}
+
+.contact-title-z {
+    font-size: 30px;
+    font-family: 'Futura', sans-serif;
+    font-weight: 400;
+    color: #727272;
+    position: relative;
+    z-index: 2;
+}
+
+.works-bg-logoz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    width: auto;
+    height: 100px;
+    z-index: 1; /* 背景として配置 */
+}
+
+.contact-intro-z {
+    margin-top: 16px;
+    font-size: 10px;
+    font-family: "fot-cezanne-pron", serif;
+    color: #727272;
+}
+
+/* WORKS下層２ */
+.portfolio-content {
+    font-size: 16px;
+}
+
+.detail-title-p {
+    width: 150px;
+    min-width: 150px;
+}
+
+/* WORKS下層３ */
+.detail-title-bc {
+    width: 150px;
+    min-width: 150px;
+}
+
+.detail-content-bc {
+    font-size: 16px;
+}
+
+#businesscard {
+    gap: 0px;
+}
+
+/* WORKS下層４ */
+#icecream {
+    gap: 0px;
+}
+
+#hamburger {
+    font-size: 18px;
+}
+
+#hamburger-p {
+    font-size: 16px;
+}
+
+/* WORKS下層５ */
+.detail-title-rich {
+    width: 150px;
+    min-width: 150px;
+}
+
+/* WORKS下層６ */
+.detail-title-pop {
+    width: 150px;
+    min-width: 150px;
+}
+
+.detail-section-pop {
+   flex-direction: column; 
+    gap: 0;
+}
+
+.detail-section-burger {
+    flex-direction: column;
+}
+
+/* サンクスページ */
+.thanks-section img {
+    width: 50%;
+    height: 50%;
+    opacity: 0.5;
+}
+
+.thanks-title {
+    font-size: 23px;
+}
+
+.thanks-text {
+    font-size: 13px;
+}
+
+/* ABOUT下層 */
+.aboutme-title {
+    font-size: 38px;
+   }
+
+.about-bg-logo {
+    height: 120px;
+}
+.aboutme-name br {
+    display: none;
+}
+
+.aboutme-photo {
+    margin-top: 0;
+}
+
+.aboutme-name {
+    font-size: 30px;
+}
+
+.aboutme-degree {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+ .aboutme-text {
+    font-size: 16px;
+ }
+
+.important-section {
+    padding-top: 40px;
+}
+
+.important-content {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.aboutme-contents {
+    width: 80%;
+}
+.section-title {
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    margin-bottom: 48px;
+}
+
+.important-content img {
+   width: 180px;
+   height: 180px;
+   margin: 0 auto ;
+}
+
+.important-content p {
+    font-size: 16px;
+}
+
+.tools-container {
+    flex-direction: column;
+    gap: 56px;
+}
+
+.tools-section {
+    padding-top: 0;
+}
+
+.tools-content {
+    flex-direction: column;
+}
+
+.tools-content img {
+    width: 150px;
+    height: 150px;
+}
+
+.tools-content p {
+    margin-top: 24px;
+    margin-left: 0;
+    text-align: center;
+    font-size: 21px;
 }

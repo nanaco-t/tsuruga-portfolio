@@ -29,15 +29,20 @@
         </h1>
         <nav>
             <ul class="navi">
-                <li>
-                    <a href="#WORKS">WORKS</a>
-                </li>
-                <li>
-                    <a href="#ABOUT">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#CONTACT">CONTACT</a>
-                </li>
+                <li><a href="#WORKS">WORKS</a></li>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="navi-sp">
+            <ul>
+                <li><a href="#WORKS">WORKS</a></li>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -48,18 +53,18 @@
             <span class="portfolio">Portfolio</span>
         </div>
         <div class="description">
-            ほんの少しスパイスを効かせたデザインで、<br>
-            見る人の心にクスッとしたワクワクを。
+            ほんの少し<br class="br-mobile">スパイスを効かせたデザインで、<br class="br-desktop"><br class="br-mobile">
+            見る人の心に<br class="br-mobile">クスッとしたワクワクを。
         </div>
     </div>
   
-    <section class="works-section works">
-        <div class="works-title-container">
+    <section class="works-section">
+        <div class="works-title-container" id="WORKS">
             <h2 class="works-title">WORKS</h2>
             <img src="./images/spice3.png" alt="サイトロゴ" class="works-bg-logo">
         </div>
         <div class="works-photo-container">
-            <a href="./works/works1.html" class="works-item">
+            <a href="./works/works1.html" class="works-item item">
                 <img src="./images/1x/works_salon.png" alt="ヘアサロンウェブサイト">
                 <p class="works-titles">LIFE hair design Website</p>
                 <div class="works-tags">
@@ -68,7 +73,7 @@
                     <p>#ウェブサイト</p>
                 </div>
             </a>
-            <a href="./works/works2.html" class="works-item">
+            <a href="./works/works2.html" class="works-item item">
                 <img src="./images/1x/works_pf.png" alt="ポートフォリオサイト">
                 <p class="works-titles">Nanako Tsuruga Portfolio</p>
                 <div class="works-tags">
@@ -78,7 +83,7 @@
             </a>
         </div>
         <div class="works-photo-container">
-            <a href="./works/works3.html" class="works-item">
+            <a href="./works/works3.html" class="works-item item">
                 <img src="./images/1x/works_namecard.png" alt="名刺">
                 <p class="works-titles">Business Card</p>
                 <div class="works-tags">
@@ -120,7 +125,7 @@
         </div>
     </section>
 
-     <section class="about-section about">
+     <section class="about-section" id="ABOUT">
         <div class="about-title-container">
             <h2 class="about-title">ABOUT</h2>
             <img src="./images/spice3.png" alt="サイトロゴ" class="works-bg-logo">
@@ -133,18 +138,18 @@
         
             <div class="about-text-content">
                 <div class="about-text">
-                    美容師・アイリスト・ヘッドスパニストとしての経験を経て、<br><br>
-                    2025年6月から前職と並行しながらWEBデザインの道へ。<br><br>
-                    継続的に、着実にスキルを積み重ねることを大切に。<br><br>
-                    初心を忘れずに。
-                </div>
+                美容師・アイリスト・ヘッドスパニストとしての経験を経て、<br class="br-desktop"><br class="br-desktop">
+                2025年6月から前職と並行しながらWEBデザインの道へ。<br class="br-desktop"><br class="br-desktop">
+                継続的に、着実にスキルを積み重ねることを大切に。<br class="br-desktop"><br class="br-desktop">
+                初心を忘れずに。
+            </div>
             
-            <a href="#" class="about-button">もっと見る</a>
+                <a href="./about.html" class="about-button">もっと見る</a>
             </div>
         </div>
     </section>
 
-    <section class="contact-section contact">
+    <section class="contact-section contact" id="CONTACT">
         <div class="contact-title-container">
             <h2 class="contact-title">CONTACT</h2>
             <img src="./images/spice3.png" alt="サイトロゴ" class="works-bg-logo">
@@ -194,6 +199,25 @@
         
         
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+           $(".hamburger").click(function(){
+            $(".hamburger").toggleClass("open")
+            $(".navi-sp").fadeToggle();
+           });
+        });
 
+        $(".navi-sp a").click(function(){
+        // .hamburger から .open クラスを削除してXマークを元に戻す
+        $(".hamburger").removeClass("open"); 
+        
+        // ナビゲーションを閉じる
+        $(".navi-sp").fadeOut(); // fadeToggle()の逆操作で閉じる
+        
+        // ※ページ遷移（aタグのデフォルト動作）はブラウザが自動で行います。
+    });
+
+    </script>
 </body>
 </html>

@@ -30,14 +30,25 @@
         <nav>
             <ul class="navi">
                 <li>
-                    <a href="#WORKS">WORKS</a>
+                    <a href="../index.html#WORKS">WORKS</a>
                 </li>
                 <li>
-                    <a href="#ABOUT">ABOUT</a>
+                    <a href="../index.html#ABOUT">ABOUT</a>
                 </li>
                 <li>
-                    <a href="#CONTACT">CONTACT</a>
+                    <a href="../index.html#CONTACT">CONTACT</a>
                 </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="navi-sp">
+            <ul>
+                <li><a href="../index.html#WORKS">WORKS</a></li>
+                <li><a href="../index.html#ABOUT">ABOUT</a></li>
+                <li><a href="../index.html#CONTACT">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -57,14 +68,14 @@
                         <img src="../images/1x/blue.png" alt="ターゲットアイコン">
                     </div>
                     <div class="target-content">
-                        <h3>新商品の魅力をSNSユーザーに<br>効果的に届ける<br>ABテストハンバーガーショップバナー</h3>
-                        <p>新商品の魅力を伝えるために、雰囲気の違う｢高級ver」と｢POPver｣の2種類のバナーを用意し、どちらがより注目されるか試して欲しいとのこと。
+                        <h3 id="hamburger">新商品の魅力をSNSユーザーに<br>効果的に届ける<br>ABテストハンバーガーショップバナー</h3>
+                        <p id="hamburger-p">新商品の魅力を伝えるために、雰囲気の違う｢高級ver」と｢POPver｣の2種類のバナーを用意し、どちらがより注目されるか試して欲しいとのこと。
 instagramとX両方で検証を行うので、正方形と長方形の2つのサイズを高級感とポップに分けて制作しました。</p>
                     </div>
                 </div>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section-pop">
             <div class="detail-title-pop">目　的</div>
             <p class="detail-content-bc">新商品の魅力をSNSユーザーに効果的に届けるため、視覚的に訴求力の高いハンバーガーバナーが必要。SNS上での拡散や注目を狙い、ブランド認知の向上と来店・購買意欲を促進すること。</p>
         </div>
@@ -74,10 +85,46 @@ instagramとX両方で検証を行うので、正方形と長方形の2つのサ
             <p class="detail-content">SNSを活用して新商品の告知を行うにあたり、数多くの投稿が流れる中で埋もれず、ユーザーの目に留まるデザインにすることが大きな課題でした。特に「高級感」と「親しみやすさ」という異なるトーンをどのように表現し、どちらがターゲット層に響くのかを見極める必要がありました。</p>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section-burger">
             <div class="detail-title approach-title">アプローチ</div>
             <p class="detail-content">POPverのバナーでは、華やかで楽しい雰囲気を演出するため、背景に紙吹雪を使用し、視覚的にお祝い感や新登場のワクワク感を強調しました。フォントには「Dela Gothic One Regular」を採用し、キャッチコピーを力強く印象的に表現。さらに、赤と黄色という食欲を刺激しやすい配色を使い、SNS上でスクロール中のユーザーの目に留まりやすいデザインにしました。全体として親しみやすく、思わずシェアしたくなるような雰囲気を意識しました。</p>
         </div>
+        
+        <div class="back-section">
+        <a href="../index.html#WORKS" class="back-button-a contact-link">一覧に戻る</a>
+
+        <div class="contact-title-container-a">
+            <h2 class="contact-title-z">CONTACT</h2>
+            <img src="../images/spice3.png" alt="サイトロゴ" class="works-bg-logoz">
+        </div>
     
+        <div class="contact-intro-z">
+            本サイトにお越しいただきありがとうございます。<br>
+            制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。
+        </div>
+
+        <a href="../index.html#CONTACT" class="back-button-a contact-link">お問い合わせ</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+           $(".hamburger").click(function(){
+            $(".hamburger").toggleClass("open")
+            $(".navi-sp").fadeToggle();
+           });
+        });
+
+        $(".navi-sp a").click(function(){
+        // .hamburger から .open クラスを削除してXマークを元に戻す
+        $(".hamburger").removeClass("open"); 
+        
+        // ナビゲーションを閉じる
+        $(".navi-sp").fadeOut(); // fadeToggle()の逆操作で閉じる
+        
+        // ※ページ遷移（aタグのデフォルト動作）はブラウザが自動で行います。
+    });
+
+    </script>
 </body>
 </html>
