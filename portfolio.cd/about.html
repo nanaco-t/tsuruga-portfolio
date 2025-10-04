@@ -61,17 +61,16 @@
 
         <div class="about-content">
             <div class="aboutme-contents">
-                <div class="aboutme-photo">
-                <!-- 写真が入る場所 -->
-                <!-- <img src="./images/profile.jpg" alt="プロフィール写真"> -->
+                <div class="aboutme-photo fade-up">
+                    <img src="./images/1x/photo.jpg" alt="プロフィール写真">
                 </div>
-                <div class="aboutme-name">
+                <div class="aboutme-name fade-up">
                     Nanako <br>Tsuruga
                 </div>
-                <p class="aboutme-degree">WEBデザイナー・プログラマー</p>
+                <p class="aboutme-degree fade-up">WEBデザイナー・プログラマー</p>
             </div>
         
-            <div class="aboutme-text-content">
+            <div class="aboutme-text-content fade-up">
                 <p class="aboutme-text">
                     はじめまして。私はこれまで美容師として7年間、アイリストとして10年間、そしてヘッドスパの施術に1年半携わり、多くのお客様と向き合いながら「美容を通じて日々を豊かにする」ことを大切にしてきました。その中で磨かれたのは、技術だけでなく、相手の想いや希望を丁寧にくみ取り、形にしていく力です。お客様の声に耳を傾け、細やかな配慮を重ねる経験は、今後の新しいキャリアにおいても大切にしていきたい強みです。
 趣味は、美術館巡りやインテリア、カフェでゆっくりと自分の時間を過ごすことです。そしてさらにこれらが、日常の中で感性を磨く大切な時間となっています。これらの趣味を通じて得た「心地よさ」や「美意識」を、今後はWebデザインという新しい形で表現していきたいと考えています。
@@ -82,20 +81,20 @@
     </section>
 
     <section class="important-section">
-        <div class="important-title-container">
+        <div class="important-title-container fade-up">
             <h2 class="section-title">Important Things</h2>
             <p class="section-subtitle">大切なこと</p>
         </div>
         <div class="important-container">
-            <div class="important-content">
+            <div class="important-content fade-up">
                 <img src="./images/1x/about_sunao.png" alt="素直でいること">
                 <p class="sunao">私は常に「素直であること」を大切にしています。素直さは成長の原点であり、学びを吸収する力につながると考えています。自分の強みや課題を率直に受け止め、他者からの意見や助言を真摯に取り入れることで、より良い成果を生み出すことができます。また、変化の多い環境においても柔軟に対応し、学び続ける姿勢を失わないためには素直さが欠かせません。今後もこの姿勢を持ち続け、日々挑戦しながら成長していきたいと考えています。</p>
             </div>
-            <div class="important-content">
+            <div class="important-content fade-up">
                 <img src="./images/1x/about_souzou.png" alt="想像力">
                 <p class="souzou">私は仕事や学びにおいて「想像力」を大切にしています。想像力は、新しいアイデアを生み出す源であり、課題に対して多角的な視点からアプローチする力につながると考えています。相手の立場に立って考えることで、より良い提案や表現を形にできるだけでなく、チームでの協働を円滑に進めることも可能になります。常に柔軟な発想を意識し、固定観念にとらわれない姿勢を持ち続けることで、自分らしい価値を生み出し続けたいと考えています。</p>
             </div>
-            <div class="important-content">
+            <div class="important-content fade-up">
                 <img src="./images/1x/about_keizoku.png" alt="探究心と継続力">
                 <p class="keizoku">私は「探究心」と「継続力」を大切にしています。探究心は新しい知識や技術を深く理解しようとする姿勢を支え、課題の本質を見極める力につながります。そして継続力は、その学びを一時的なものに終わらせず、日々の努力を積み重ねて成果へとつなげるために欠かせません。興味を持ったことを徹底的に掘り下げ、試行錯誤を繰り返しながら成長を実感することに大きなやりがいを感じています。今後もこの二つの力を軸に、自分らしい成果を積み上げていきたいと考えています。</p>
             </div>
@@ -103,23 +102,23 @@
     </section>
 
     <section class="tools-section">
-        <div class="tools--title-container">
+        <div class="tools--title-container fade-up">
             <h2 class="section-title">Tools</h2>
             <p class="section-subtitle">使用ツール</p>
         </div>
         <div class="tools-container">
-            <div class="tools-content">
+            <div class="tools-content fade-up">
                 <img src="./images/1x/about_design.png" alt="デザイン">
                 <p>Illustrator<br>Photoshop<br>Figma</p>
             </div>
-            <div class="tools-content">
+            <div class="tools-content fade-up">
                 <img src="./images/1x/about_cording.png" alt="コーディング">
                 <p><span class="no-break">VS Code</span><br>HTML<br>CSS</p>
             </div>
         </div>
     </section>
 
-    <div class="back-section">
+    <div class="back-section fade-up">
             <div class="contact-title-container-a">
                 <h2 class="contact-title-z">CONTACT</h2>
                 <img src="./images/spice3.png" alt="サイトロゴ" class="works-bg-logoz">
@@ -151,7 +150,28 @@
         
         // ※ページ遷移（aタグのデフォルト動作）はブラウザが自動で行います。
     });
+    
+        // スクロールアニメーション
+    const fadeUpElements = document.querySelectorAll('.fade-up');
 
+    const observerOptions = {
+      threshold: 0.2, // 要素の20%が見えたら発火
+      rootMargin: '0px 0px -50px 0px' // 下から50px手前で発火
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // 一度表示したら監視を解除（再度非表示にしない場合）
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    fadeUpElements.forEach(element => {
+      observer.observe(element);
+    });
     </script>
 </body>
 </html>    

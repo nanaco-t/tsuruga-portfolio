@@ -54,21 +54,21 @@
     </header>
 
     <div class="container">
-        <h1 class="page-title">LIFE hair design Website</h1>
+        <h1 class="page-title fade-up">LIFE hair design Website</h1>
         
-        <div class="hero-image">
+        <div class="hero-image fade-up">
             <img src="../images/1x/salon_kasou1.jpg" alt="LIFE hair design Website デスクトップ版">
         </div>
         
         <div class="duration">制作期間：30時間程度</div>
         
         <div class="content-section">
-            <div class="mobile-image">
+            <div class="mobile-image fade-up">
                 <img src="../images/1x/salon_kasou2.jpg" alt="LIFE hair design Website モバイル版">
             </div>
             
             <div class="content-text">
-                <div class="target-section">
+                <div class="target-section fade-up">
                     <div class="blue-icon">
                         <img src="../images/1x/blue.png" alt="ターゲットアイコン">
                     </div>
@@ -80,17 +80,17 @@
             </div>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section fade-up">
             <div class="detail-title">目　的</div>
             <p class="detail-content">10周年を機会にサイトをリニューアルし、20～50代の女性をターゲットに認知向上・予約獲得・SNSフォローアップを促進させること。</p>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section fade-up">
             <div class="detail-title">課　題</div>
             <p class="detail-content">既存サイトは情報が整理されておらず、20～50代女性に響くデザインやコンテンツ不足が課題となっていました。店舗の雰囲気やスタイリストの魅力が十分に伝わらず、予約獲得も怠慢な上場場合が多く発生。さらにSNSとの連携が弱く、サイト期間からフォロワーシェアにつながりにくいため、認知拡大とファン形成の妨げとなっていました。</p>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section fade-up">
             <div class="detail-title approach-title">アプローチ</div>
             <p class="detail-content">サイトを訪れた人が気軽に「行ってみたい」と思えるように、柔らかで女性らしいデザインで親近を演出できるまきよう事的要求を滑出しました。さらに「STYLE FIT」というコンセプトに合わせて曲線や流線シェイプでどんな年代にもフィットするイメージを重ねています。予約ボタンはわかりやすいように配慮し、スマホから簡単に操作できるようになっています。また、スタイリスト紹介や施術事例を豊富に見せることで安心感を提供。さらに<a href="#" class="instagram-link">Instagram</a>とつなげ、来店せずともフォローシェアにつながる導線に配慮しました。</p>
         </div>
@@ -100,15 +100,15 @@
             <img src="../images/1x/salon_kasou4.jpg" alt="LIFE hair design Website SP版全体像">
         </div>
 
-        <div class="back-section">
+        <div class="back-section fade-up">
         <a href="../index.html#WORKS" class="back-button-a contact-link">一覧に戻る</a>
 
-        <div class="contact-title-container-a">
+        <div class="contact-title-container-a fade-up">
             <h2 class="contact-title-z">CONTACT</h2>
             <img src="../images/spice3.png" alt="サイトロゴ" class="works-bg-logoz">
         </div>
     
-        <div class="contact-intro-z">
+        <div class="contact-intro-z fade-up">
             本サイトにお越しいただきありがとうございます。<br>
             制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。
         </div>
@@ -134,7 +134,28 @@
         
         // ※ページ遷移（aタグのデフォルト動作）はブラウザが自動で行います。
     });
+    
+        // スクロールアニメーション
+    const fadeUpElements = document.querySelectorAll('.fade-up');
 
+    const observerOptions = {
+      threshold: 0.2, // 要素の20%が見えたら発火
+      rootMargin: '0px 0px -50px 0px' // 下から50px手前で発火
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // 一度表示したら監視を解除（再度非表示にしない場合）
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    fadeUpElements.forEach(element => {
+      observer.observe(element);
+    });
     </script>
 </body>
 </html>

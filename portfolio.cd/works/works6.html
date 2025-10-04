@@ -53,16 +53,16 @@
         </nav>
     </header>
 
-     <div class="container">
+     <div class="container fade-up">
         <h1 class="page-title">Icecream Banner</h1>
         
-        <div class="hero-image">
+        <div class="hero-image fade-up">
             <img src="../images/1x/pop_kasou.jpg" alt="Hamburger Banner Popverモックアップ">
         </div>
         
         <div class="duration">制作期間：３時間程度</div>
 
-        <div class="content-text">
+        <div class="content-text fade-up">
                 <div class="target-section">
                     <div class="blue-icon">
                         <img src="../images/1x/blue.png" alt="ターゲットアイコン">
@@ -75,30 +75,30 @@ instagramとX両方で検証を行うので、正方形と長方形の2つのサ
                 </div>
         </div>
         
-        <div class="detail-section-pop">
+        <div class="detail-section-pop fade-up">
             <div class="detail-title-pop">目　的</div>
             <p class="detail-content-bc">新商品の魅力をSNSユーザーに効果的に届けるため、視覚的に訴求力の高いハンバーガーバナーが必要。SNS上での拡散や注目を狙い、ブランド認知の向上と来店・購買意欲を促進すること。</p>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section fade-up">
             <div class="detail-title">課　題</div>
             <p class="detail-content">SNSを活用して新商品の告知を行うにあたり、数多くの投稿が流れる中で埋もれず、ユーザーの目に留まるデザインにすることが大きな課題でした。特に「高級感」と「親しみやすさ」という異なるトーンをどのように表現し、どちらがターゲット層に響くのかを見極める必要がありました。</p>
         </div>
         
-        <div class="detail-section-burger">
+        <div class="detail-section-burger fade-up">
             <div class="detail-title approach-title">アプローチ</div>
             <p class="detail-content">POPverのバナーでは、華やかで楽しい雰囲気を演出するため、背景に紙吹雪を使用し、視覚的にお祝い感や新登場のワクワク感を強調しました。フォントには「Dela Gothic One Regular」を採用し、キャッチコピーを力強く印象的に表現。さらに、赤と黄色という食欲を刺激しやすい配色を使い、SNS上でスクロール中のユーザーの目に留まりやすいデザインにしました。全体として親しみやすく、思わずシェアしたくなるような雰囲気を意識しました。</p>
         </div>
         
-        <div class="back-section">
+        <div class="back-section fade-up">
         <a href="../index.html#WORKS" class="back-button-a contact-link">一覧に戻る</a>
 
-        <div class="contact-title-container-a">
+        <div class="contact-title-container-a fade-up">
             <h2 class="contact-title-z">CONTACT</h2>
             <img src="../images/spice3.png" alt="サイトロゴ" class="works-bg-logoz">
         </div>
     
-        <div class="contact-intro-z">
+        <div class="contact-intro-z fade-up">
             本サイトにお越しいただきありがとうございます。<br>
             制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。
         </div>
@@ -124,7 +124,28 @@ instagramとX両方で検証を行うので、正方形と長方形の2つのサ
         
         // ※ページ遷移（aタグのデフォルト動作）はブラウザが自動で行います。
     });
+    
+        // スクロールアニメーション
+    const fadeUpElements = document.querySelectorAll('.fade-up');
 
+    const observerOptions = {
+      threshold: 0.2, // 要素の20%が見えたら発火
+      rootMargin: '0px 0px -50px 0px' // 下から50px手前で発火
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // 一度表示したら監視を解除（再度非表示にしない場合）
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    fadeUpElements.forEach(element => {
+      observer.observe(element);
+    });
     </script>
 </body>
 </html>

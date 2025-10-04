@@ -54,15 +54,15 @@
     </header>
 
      <div class="container">
-        <h1 class="page-title">Icecream Banner</h1>
+        <h1 class="page-title fade-up">Icecream Banner</h1>
         
-        <div class="hero-image">
+        <div class="hero-image fade-up">
             <img src="../images/1x/ice_kasou.jpg" alt="Icecream Bannerモックアップ">
         </div>
         
         <div class="duration">制作期間：５時間程度</div>
 
-        <div class="content-text">
+        <div class="content-text fade-up">
                 <div class="target-section">
                     <div class="orange-icon">
                         <img src="../images/1x/orange.png" alt="ターゲットアイコン">
@@ -74,31 +74,31 @@
                 </div>
         </div>
         
-        <div class="detail-section" id="icecream">
+        <div class="detail-section fade-up" id="icecream">
             <div class="detail-title-p">目　的</div>
             <p class="detail-content-bc">限定2商品を掲載し、新規顧客への認知獲得と来店促進のため。</p>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section fade-up">
             <div class="detail-title-p">課　題</div>
             <p class="detail-content">夏限定フレーバーを訴求するにあたり、SNS上で多数の情報が流れる中で埋もれず、ユーザーの目に留まるデザインにすることが課題でした。特に2種類の限定商品をどのようにバナー内で見せ、魅力を効果的に伝えるかが大きなポイントでした。また、視覚的に「夏らしさ」のある爽やかな印象にしたいとのことでした。</p>
         </div>
         
-        <div class="detail-section">
+        <div class="detail-section fade-up">
             <div class="detail-title approach-title-p">アプローチ</div>
             <p class="detail-content">夏限定フレーバーを訴求するにあたり、SNS上で多数の情報が流れる中で埋もれず、ユーザーの目に留まるデザインにすることが課題でした。特に2種類の限定商品をどのようにバナー内で見せ、魅力を効果的に伝えるかが大きなポイントでした。また、視覚的に「夏らしさ」と「期間限定感」を両立させつつ、認知から来店までスムーズにつなげる導線設計をどう取り入れるかも課題となりました。</p>
         </div>
 
 
-    <div class="back-section">
+    <div class="back-section fade-up">
         <a href="../index.html#WORKS" class="back-button-b contact-link">一覧に戻る</a>
 
-        <div class="contact-title-container-a">
+        <div class="contact-title-container-a fade-up">
             <h2 class="contact-title-z">CONTACT</h2>
             <img src="../images/spice3.png" alt="サイトロゴ" class="works-bg-logoz">
         </div>
     
-        <div class="contact-intro-z">
+        <div class="contact-intro-z fade-up">
             本サイトにお越しいただきありがとうございます。<br>
             制作のご相談やご質問など、下記フォームよりお気軽にお問い合わせください。
         </div>
@@ -124,7 +124,28 @@
         
         // ※ページ遷移（aタグのデフォルト動作）はブラウザが自動で行います。
     });
+    
+        // スクロールアニメーション
+    const fadeUpElements = document.querySelectorAll('.fade-up');
 
+    const observerOptions = {
+      threshold: 0.2, // 要素の20%が見えたら発火
+      rootMargin: '0px 0px -50px 0px' // 下から50px手前で発火
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // 一度表示したら監視を解除（再度非表示にしない場合）
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    fadeUpElements.forEach(element => {
+      observer.observe(element);
+    });
     </script>
 </body>
 </html>
