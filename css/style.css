@@ -1,11 +1,8 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'Futura';
-    src: url('../fonts/futura-medium.woff2') format('woff2'),
-         url('../fonts/futura-medium.woff') format('woff'),
-         url('../fonts/futura-medium.ttf') format('truetype'),
-         url('../fonts/futura-medium.otf') format('opentype');
+  font-family: 'Futura';
+  src: url('https://nanaco-t.github.io/tsuruga-portfolio/fonts/Futura-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
