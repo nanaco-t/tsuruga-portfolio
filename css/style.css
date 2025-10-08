@@ -1158,9 +1158,10 @@ a {
 }
 
 .thanks-section img {
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 10%;
     opacity: 0.5;
+    margin: 16px 0;
 }
 
 .thanks-title {
@@ -2047,13 +2048,13 @@ a {
 
 /* サンクスページ */
 .thanks-section img {
-    width: 50%;
-    height: 50%;
+    width: 13%;
+    height: 13%;
     opacity: 0.5;
 }
 
 .thanks-title {
-    font-size: 23px;
+    font-size: 30px;
 }
 
 .thanks-text {
@@ -2373,5 +2374,11 @@ a {
 
 .important-section {
     padding-inline: 20px;
+}
+
+.thanks-section img {
+    width: 23%;
+    height: 23%;
+    opacity: 0.5;
 }
 }
