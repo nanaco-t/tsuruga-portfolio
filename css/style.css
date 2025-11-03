@@ -1967,7 +1967,7 @@ a {
     transform: translate(-50%, -50%);
     opacity: 0.5;
     width: auto;
-    height: 50px;
+    height: 35px;
     z-index: 1; /* 背景として配置 */
 }
 
